@@ -1,0 +1,356 @@
+:root {
+  --ship-height: 100px;
+  --ship-width: 75px;
+  --ship-top-height: 59px;
+  --ship-top-width: 59px;
+  --ship-hull-top: -75px;
+  --ship-hull-left: 7px;
+  --tippler-connector-width: ;
+  --border-color: #336791;
+  --bed-box-shadow: none;
+}
+
+.TrainHead {
+  height: 80px;
+  width: 80px;
+  background-color: #f11f46;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  position: relative;
+  z-index: 10;
+}
+.innerCircle {
+  height: 60px;
+  width: 60px;
+  background: linear-gradient(109.03deg, #03294a 4.58%, #091321 91.02%);
+  box-shadow: 0px 4px 4px #710015;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  position: absolute;
+  margin-right: 20px;
+  position: absolute;
+  z-index: 9;
+}
+.ConsignmentGlow {
+  display: none;
+  height: 65px;
+  width: 65px;
+  opacity: 0.5;
+  background-color: #35cfff;
+  border-radius: 50px;
+  position: absolute;
+  z-index: -1;
+}
+.Consignment {
+  height: 50px;
+  width: 50px;
+  background-color: #35cfff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+.ConsignmentBack {
+  display: none;
+  background-color: grey !important;
+  height: 50px;
+  width: 50%;
+  right: 0px;
+  position: absolute;
+  z-index: -1;
+}
+
+.SalSteel {
+  width: 200px;
+  height: 200px;
+  border: 10px solid #335291;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #335291;
+  font-size: 30px;
+}
+.ConsignmentWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.locationH {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.TipplerConnector {
+  width: 70px;
+  height: 1px;
+  border: 5px solid #335291;
+}
+.Tippler {
+  height: 200px;
+  width: 70px;
+  border-radius: 5px;
+  border: 5px solid #335291;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.locationLabel {
+  color: #335291;
+  padding-right: 20px;
+}
+
+.tinyShipLabel {
+  color: #335291;
+}
+.indicator {
+  height: 50px;
+  width: 50px;
+  background-color: #335291;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  position: relative;
+  z-index: 5;
+}
+.innerConsignment {
+  height: 40px;
+  width: 40px;
+  background: linear-gradient(109.03deg, #03294a 4.58%, #091321 91.02%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+.trainTrack {
+  width: 10px;
+  height: 4000px;
+  background: transparent;
+  border: 2px solid #335291;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.conveyor {
+  width: 30px;
+  height: 500px;
+  border-radius: 10px;
+  background: transparent;
+  border: 5px solid #335291;
+  border-top: transparent;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.conveyorLabel {
+  color: #335291;
+  font-size: 30px;
+  left: 50px;
+  position: absolute;
+}
+.terminal {
+  border-radius: 50px;
+  height: 20px;
+  width: 20px;
+  background: #335291;
+}
+.terminals {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.conveyorEnd {
+  content: '';
+  height: 5px;
+  width: 290px;
+  border-radius: 10px;
+  background: #335291;
+  position: absolute;
+  top: 1px;
+}
+.conveyor::before {
+  content: '';
+  height: 70px;
+  width: 70px;
+  margin-top: 20px;
+  border-radius: 10px;
+  position: absolute;
+  border: 5px solid #335291;
+  background-color: #181a3d;
+}
+.mptConnector {
+  height: 310px;
+  width: 75px;
+  border-radius: 5px;
+  border: 10px solid #335291;
+  position: absolute;
+  border-left: none;
+  display: flex;
+  align-items: center;
+}
+.MPTLabel {
+  color: #335291;
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 90px;
+  transform: rotate(180deg);
+}
+
+.ship {
+  height: 120px;
+  width: 90px;
+}
+
+.shipTop {
+  position: relative;
+  border-left: 4px solid transparent;
+  border-bottom: 4px transparent #335291;
+}
+.shipTop,
+.shipTop::before {
+  display: block;
+  box-sizing: border-box;
+  border-right: 4px solid transparent;
+}
+.shipTop::before {
+  content: '';
+  position: absolute;
+  border-radius: 3px;
+  width: var(--ship-top-width);
+  height: var(--ship-top-height);
+  border-left: 3px solid #335291;
+  border-top: 3px solid #335291;
+  border-bottom: 3px solid transparent;
+  top: var(--ship-hull-top);
+  left: var(--ship-hull-left);
+  transform: rotate(-135deg);
+}
+
+.shipBody {
+  height: var(--ship-height);
+  width: var(--ship-width);
+  border-radius: 3px;
+  border: 3px solid #335291;
+  border-bottom: 3px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  top: calc(-148px - calc(var(--ship-height) - 100px));
+  position: relative;
+}
+
+.shipBed {
+  border-radius: 3px;
+  height: 65px;
+  width: 65px;
+  border: 3px solid var(--border-color);
+  box-shadow: var(--bed-box-shadow);
+}
+.trainTrack:after {
+  content: '_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _';
+  font-size: 70px;
+  font-weight: bold;
+  color: #335291;
+  vertical-align: 3px;
+  transform: rotate(180deg);
+}
+
+.arrowDown {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  position: absolute;
+  bottom: -15px;
+  border-top: 25px solid #f11f46;
+  z-index: -1;
+}
+
+.bedNumber {
+  color: #526898;
+}
+
+.popUp {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 200px;
+  width: 150px;
+  background: linear-gradient(0.46deg, #04233e -39.7%, #073357 99.43%);
+  border-radius: 5px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.consHeader {
+  color: #667dad;
+  font-size: 16px;
+  font-weight: bold;
+}
+.reclaimerTrack {
+  background: #9cbfdb;
+  width: 2px;
+  height: 850px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.reclaimerTrackLabel {
+  font-size: 30px;
+  color: #9cbfdb;
+  top: -40px;
+  position: relative;
+}
+
+.reclaimerTrack:after {
+  content: '_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _';
+  font-size: 20px;
+  color: #9cbfdb;
+  vertical-align: 3px;
+  transform: rotate(180deg);
+  margin-right: 11px;
+}
+.consLabel {
+  color: white;
+  font-size: 15px;
+}
+
+.tile {
+  border: 2px solid #526898;
+  height: 120px;
+  width: 100px;
+  border-radius: 5px;
+  background: transparent;
+  /* transform-origin: center top; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #526898;
+}
+
+.board {
+  width: 1000px;
+  height: 850px;
+  border: 4px solid #526898;
+  border-radius: 10px;
+}
